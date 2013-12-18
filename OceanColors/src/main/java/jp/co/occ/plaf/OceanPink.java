@@ -37,20 +37,15 @@ import javax.swing.plaf.ColorUIResource;
 import javax.swing.plaf.metal.OceanTheme;
 
 
-public class OceanPink extends OceanTheme {
-    //private static final ColorUIResource PRIMARY1 = new ColorUIResource(0x6382BF);
+public class OceanPink extends OceanTheme implements OceanColor {
+    private Color background = new ColorUIResource(250, 193, 214);
+    
     private static final ColorUIResource PRIMARY1 = new ColorUIResource(99, 130, 191);
-    //private static final ColorUIResource PRIMARY2 = new ColorUIResource(0xA3B8CC);
     private static final ColorUIResource PRIMARY2 = new ColorUIResource(163, 184, 204);
-    //private static final ColorUIResource PRIMARY3 = new ColorUIResource(0xB8CFE5);
     private static final ColorUIResource PRIMARY3 = new ColorUIResource(184, 207, 229);
-    //private static final ColorUIResource SECONDARY1 = new ColorUIResource(0x7A8A99);
     private static final ColorUIResource SECONDARY1 = new ColorUIResource(112, 128, 153);
-    //private static final ColorUIResource SECONDARY2 = new ColorUIResource(0xB8CFE5);
     private static final ColorUIResource SECONDARY2 = new ColorUIResource(184, 207, 229);
-    //private static final ColorUIResource SECONDARY3 = new ColorUIResource(0xfdebf2);
     private static final ColorUIResource SECONDARY3 = new ColorUIResource(253, 235, 242);
-    private static final Color background = new ColorUIResource(250, 193, 214);
     
     protected ColorUIResource getPrimary1() { return PRIMARY1; }
     protected ColorUIResource getPrimary2() { return PRIMARY2; }
@@ -62,10 +57,7 @@ public class OceanPink extends OceanTheme {
     public void addCustomEntriesToTable(UIDefaults table) {
         super.addCustomEntriesToTable(table);
         
-        //Color dadada = new ColorUIResource(0xDADADA);
         Color dadada = new ColorUIResource(218, 218, 218);
-        ///Color background = new ColorUIResource(0xfac1d6); 
-        //Color background = new ColorUIResource(250, 193, 214);
         Object[] defaults = new Object[] {
             "TabbedPane.borderHightlightColor", getPrimary1(),
             "TabbedPane.contentAreaColor", background,
@@ -73,13 +65,12 @@ public class OceanPink extends OceanTheme {
             "TabbedPane.selected", background,
             "TabbedPane.tabAreaBackground", dadada,
             "TabbedPane.tabAreaInsets", new Insets(2, 2, 0, 6),
-            //"TabbedPane.unselectedBackground", SECONDARY3,
             "TabbedPane.unselectedBackground", dadada,
         };
         table.putDefaults(defaults);
     }
     
-    public static Color getBackgroundColor(){
+    public Color getBGColor(){
         return background;
     }        
     
