@@ -14,4 +14,5 @@ import javax.swing.UIDefaults;
 public interface OceanColor {
     public void addCustomEntriesToTable(UIDefaults table);
     public Color getBGColor();
+    public OceanColor getInstance(String name);
 }
