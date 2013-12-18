@@ -73,15 +73,4 @@ public class OceanYellow extends OceanTheme implements OceanColor {
     public Color getBGColor(){
         return background;
     }
-
-    public OceanColor getInstance(String name) {
-        try {
-            Class cls = Class.forName(name);
-            return (OceanColor)cls.newInstance();
-        } catch (ClassNotFoundException e) {
-        } catch (InstantiationException e) {
-        } catch (IllegalAccessException e) {
-        }
-        return null;
-    }
 }
