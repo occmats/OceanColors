@@ -39,6 +39,7 @@ import javax.swing.plaf.metal.OceanTheme;
 
 public class OceanPink extends OceanTheme implements OceanColor {
     private Color background = new ColorUIResource(250, 193, 214);
+    private String zebraColor = new String("253,235,242");
     
     private static final ColorUIResource PRIMARY1 = new ColorUIResource(99, 130, 191);
     private static final ColorUIResource PRIMARY2 = new ColorUIResource(163, 184, 204);
@@ -72,7 +73,11 @@ public class OceanPink extends OceanTheme implements OceanColor {
     
     public Color getBGColor(){
         return background;
-    }        
+    }       
+    
+    public String getZBRColor(){
+        return zebraColor;
+    }
     
     public OceanColor getInstance(String name) {
         try {
